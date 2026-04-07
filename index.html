@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjana Wijerathna | Developer & Gamer</title>
-    <meta name="description" content="Personal portfolio of Anjana Wijerathna - 2nd year BCS Hons SE student, web developer, and gamer from Sri Lanka.">
+    <title>Anjana Wijerathna | Developer & Gamer from Sri Lanka</title>
+    <meta name="description" content="Personal portfolio of Anjana Wijerathna - 2nd year BCS Hons SE student, web developer, and gamer from Sri Lanka. View my projects, gaming setup, and blog posts.">
+    <meta name="keywords" content="Anjana Wijerathna, Anjana Dulan, web developer, BCS Hons SE, Sri Lanka developer, AgroChain, portfolio, gaming blog">
+    <meta name="author" content="Anjana Wijerathna">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://anjanadulan.github.io/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anjanadulan.github.io/">
+    <meta property="og:title" content="Anjana Wijerathna | Developer & Gamer from Sri Lanka">
+    <meta property="og:description" content="Personal portfolio of Anjana Wijerathna - 2nd year BCS Hons SE student, web developer, and gamer from Sri Lanka.">
+    <meta property="og:image" content="https://anjanadulan.github.io/og-image.png">
+    <meta property="og:site_name" content="Anjana Wijerathna">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://anjanadulan.github.io/">
+    <meta name="twitter:title" content="Anjana Wijerathna | Developer & Gamer">
+    <meta name="twitter:description" content="Personal portfolio of Anjana Wijerathna - 2nd year BCS Hons SE student, web developer, and gamer from Sri Lanka.">
+    <meta name="twitter:image" content="https://anjanadulan.github.io/og-image.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anjana Wijerathna",
+        "alternateName": "Anjana Dulan",
+        "url": "https://anjanadulan.github.io/",
+        "sameAs": [
+            "https://github.com/anjanadulan",
+            "https://steamcommunity.com/id/master1223",
+            "https://www.youtube.com/@masterlive23"
+        ],
+        "jobTitle": "Web Developer",
+        "description": "2nd year BCS Hons SE student and part-time web developer from Sri Lanka"
+    }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,12 +50,13 @@
 </head>
 <body>
     <div class="bg-pattern"></div>
+    <div class="floating-particles" id="particles"></div>
     
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand">
-                <span class="brand-icon">A</span>
-                <span class="brand-text">Anjana</span>
+                <span class="brand-icon">D</span>
+                <span class="brand-text">DevBlog</span>
             </a>
             
             <button class="mobile-toggle" aria-label="Menu">
@@ -26,10 +65,12 @@
                 <span></span>
             </button>
             
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
+<div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="gaming.html" class="nav-link">Gaming</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
             <button class="theme-btn" aria-label="Toggle theme">
@@ -54,25 +95,25 @@
     <main class="main">
         <section class="hero">
             <div class="hero-content">
-                <div class="avatar">
+                <div class="avatar animate-float">
                     <span>AW</span>
                     <div class="avatar-ring"></div>
                 </div>
                 <div class="hero-text">
                     <h1>
-                        <span class="line">Hi, I'm</span>
-                        <span class="name">Anjana Wijerathna</span>
+                        <span class="line animate-fade-in-up stagger-1">Hi, I'm</span>
+                        <span class="name gradient-text-animated animate-fade-in-up stagger-2">Anjana Wijerathna</span>
                     </h1>
-                    <p class="bio">
+                    <p class="bio animate-fade-in-up stagger-3">
                         2nd year BCS Hons SE student & part-time web developer. 
                         Passionate about robotics, web design, and micro controlling IOT systems.
                         When not coding, you'll find me gaming.
                     </p>
-                    <div class="skills">
-                        <span class="skill">Web Development</span>
-                        <span class="skill">Robotics</span>
-                        <span class="skill">IOT</span>
-                        <span class="skill">Gaming</span>
+                    <div class="skills animate-fade-in-up stagger-4">
+                        <span class="skill hover-scale">Web Development</span>
+                        <span class="skill hover-scale">Robotics</span>
+                        <span class="skill hover-scale">IOT</span>
+                        <span class="skill hover-scale">Gaming</span>
                     </div>
                 </div>
             </div>
@@ -89,39 +130,17 @@
                     <div class="posts-list">
                         <article class="post-card">
                             <div class="post-image">
-                                <span class="post-category dev">Development</span>
+                                <span class="post-category gaming">Gaming</span>
                             </div>
                             <div class="post-content">
                                 <div class="post-meta">
-                                    <time>April 5, 2026</time>
-                                    <span class="dot"></span>
-                                    <span>5 min read</span>
-                                </div>
-                                <h3>Building a REST API with Express and TypeScript</h3>
-                                <p>A practical guide to structuring and deploying type-safe APIs with proper error handling and middleware patterns.</p>
-                                <a href="#" class="post-link">
-                                    Read more
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"/>
-                                        <polyline points="12 5 19 12 12 19"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </article>
-
-                        <article class="post-card">
-                            <div class="post-image tutorial">
-                                <span class="post-category">Tutorial</span>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <time>March 28, 2026</time>
+                                    <time>April 1, 2026</time>
                                     <span class="dot"></span>
                                     <span>8 min read</span>
                                 </div>
-                                <h3>React Server Components: A Deep Dive</h3>
-                                <p>Understanding the mental model behind RSC, when to use them, and how they differ from traditional client-side components.</p>
-                                <a href="#" class="post-link">
+                                <h3>My HP Victus 15 Gaming Experience After 6 Months</h3>
+                                <p>A real-world review of my HP Victus 15 gaming laptop after 6 months of daily use. Here's what I really think about the Ryzen 5 7535HS and RX 6550M.</p>
+                                <a href="posts/hp-victus-15-review.html" class="post-link">
                                     Read more
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <line x1="5" y1="12" x2="19" y2="12"/>
@@ -132,18 +151,216 @@
                         </article>
 
                         <article class="post-card">
-                            <div class="post-image devops">
-                                <span class="post-category">DevOps</span>
+                            <div class="post-image">
+                                <span class="post-category iot">IoT</span>
                             </div>
                             <div class="post-content">
                                 <div class="post-meta">
                                     <time>March 15, 2026</time>
                                     <span class="dot"></span>
+                                    <span>10 min read</span>
+                                </div>
+                                <h3>Building My First IoT Project: Smart Prison Prototype</h3>
+                                <p>A detailed walkthrough of my IoT journey - how I built the Smart Prison Prototype using Arduino, ESP8266, and various sensors.</p>
+                                <a href="posts/smart-prison-prototype.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category programming">Programming</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>March 5, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>5 min read</span>
+                                </div>
+                                <h3>Gaming as a Student: How I Balance Fun and Focus</h3>
+                                <p>As a university student, gaming helps me destress. Here's how I balance gaming with my studies and coding projects without compromising productivity.</p>
+                                <a href="posts/gaming-as-a-student.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category programming">Programming</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>March 1, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>7 min read</span>
+                                </div>
+                                <h3>Combating Burnout as a Developer Student</h3>
+                                <p>Burnout almost got me. Here's what I learned about recognizing the signs, preventing exhaustion, and maintaining sustainable productivity.</p>
+                                <a href="posts/combating-burnout.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category programming">Life</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>February 20, 2026</time>
+                                    <span class="dot"></span>
                                     <span>6 min read</span>
                                 </div>
-                                <h3>Setting Up Docker for Local Development</h3>
-                                <p>Streamline your development workflow with Docker Compose, volume mounting, and hot reloading configurations.</p>
-                                <a href="#" class="post-link">
+                                <h3>My First Year at University: Lessons I Learned</h3>
+                                <p>Reflections on my first year studying Software Engineering. What surprised me, what I wish I knew, and advice for new CS students.</p>
+                                <a href="posts/first-year-university.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category programming">Programming</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>February 10, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>6 min read</span>
+                                </div>
+                                <h3>How I Take Notes for Programming Courses</h3>
+                                <p>My note-taking system for CS courses - tools, techniques, and how I organize code-heavy notes for effective studying.</p>
+                                <a href="posts/note-taking-programming.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category programming">Programming</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>February 5, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>7 min read</span>
+                                </div>
+                                <h3>My Java Learning Journey: From Confusion to Confidence</h3>
+                                <p>How I went from struggling with Java concepts to building real projects like AgroChain. Tips, resources, and lessons learned.</p>
+                                <a href="posts/learning-java-journey.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category dev">Dev Tools</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>January 25, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>7 min read</span>
+                                </div>
+                                <h3>My VS Code Setup: Extensions, Themes, and Productivity</h3>
+                                <p>A detailed look at my VS Code configuration - the extensions I use, theme choices, keyboard shortcuts, and settings.</p>
+                                <a href="posts/vscode-setup.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category dev">Dev Tools</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>January 20, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>6 min read</span>
+                                </div>
+                                <h3>Essential Tools for Every Developer: My Development Setup</h3>
+                                <p>The essential tools and software I use daily as a developer - from code editors to terminal tools, version control to productivity apps.</p>
+                                <a href="posts/developer-setup.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category dev">Dev Tools</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>January 15, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>8 min read</span>
+                                </div>
+                                <h3>Getting Started with Git and GitHub: A Beginner's Guide</h3>
+                                <p>Git and GitHub essentials for beginners. Learn version control basics, branching strategies, and how to collaborate with other developers.</p>
+                                <a href="posts/git-github-beginners.html" class="post-link">
+                                    Read more
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                        <polyline points="12 5 19 12 12 19"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <span class="post-category programming">Personal</span>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <time>January 10, 2026</time>
+                                    <span class="dot"></span>
+                                    <span>5 min read</span>
+                                </div>
+                                <h3>Why I Chose Software Engineering</h3>
+                                <p>The story behind my decision to study Software Engineering - from early curiosity to choosing my path in tech.</p>
+                                <a href="posts/why-software-engineering.html" class="post-link">
                                     Read more
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <line x1="5" y1="12" x2="19" y2="12"/>
@@ -236,6 +453,11 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
             <p>Built with passion & coffee. &copy; 2026 Anjana Wijerathna.</p>
         </div>
     </footer>

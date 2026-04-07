@@ -26,7 +26,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Scroll animations
+    // Create floating particles
+    function createParticles() {
+        const container = document.getElementById('particles');
+        if (!container) return;
+        
+        const colors = ['#3b82f6', '#8b5cf6', '#f472b6', '#60a5fa', '#c084fc'];
+        const particleCount = 15;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'floating-particle';
+            
+            const size = Math.random() * 6 + 2;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const left = Math.random() * 100;
+            const duration = Math.random() * 15 + 10;
+            const delay = Math.random() * 10;
+            
+            particle.style.cssText = `
+                width: ${size}px;
+                height: ${size}px;
+                background: ${color};
+                left: ${left}%;
+                animation-duration: ${duration}s;
+                animation-delay: ${delay}s;
+            `;
+            
+            container.appendChild(particle);
+        }
+    }
+    createParticles();
+    
+    // Scroll animations with Intersection Observer
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -42,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
     
-    document.querySelectorAll('.post-card, .project-item, .social-link').forEach((el, index) => {
+    document.querySelectorAll('.post-card, .project-item, .social-link, .project-card, .profile-card, .game-card').forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
@@ -54,6 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-link').forEach(link => {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
+        }
+    });
+    
+    // Parallax effect on scroll
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const particles = document.getElementById('particles');
+        if (particles) {
+            particles.style.transform = `translateY(${scrolled * 0.3}px)`;
         }
     });
 });

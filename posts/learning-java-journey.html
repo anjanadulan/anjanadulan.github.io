@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Java Learning Journey: From Confusion to Confidence | DevBlog</title>
+    <meta name="description" content="How I went from struggling with Java concepts to building real projects like AgroChain. Tips, resources, and lessons learned from my journey.">
+    <meta name="keywords" content="learning Java, Java for beginners, AgroChain project, Java JDBC, Swing GUI">
+    <meta name="author" content="Anjana Wijerathna">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://anjanadulan.github.io/posts/learning-java-journey.html">
+    
+    <meta property="og:title" content="My Java Learning Journey: From Confusion to Confidence">
+    <meta property="og:description" content="How I went from struggling with Java concepts to building real projects like AgroChain.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://anjanadulan.github.io/posts/learning-java-journey.html">
+    <meta property="og:site_name" content="DevBlog">
+    <meta property="article:published_time" content="2026-02-20">
+    <meta property="article:author" content="Anjana Wijerathna">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "My Java Learning Journey: From Confusion to Confidence",
+        "description": "How I went from struggling with Java concepts to building real projects like AgroChain.",
+        "author": {
+            "@type": "Person",
+            "name": "Anjana Wijerathna"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DevBlog",
+            "url": "https://anjanadulan.github.io/"
+        },
+        "datePublished": "2026-02-20"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="floating-particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="brand">
+                <span class="brand-icon">D</span>
+                <span class="brand-text">DevBlog</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../gaming.html" class="nav-link">Gaming</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="theme-btn" aria-label="Toggle theme">
+                <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main">
+        <article class="post-article">
+            <header class="post-header">
+                <div class="container">
+                    <a href="../index.html" class="back-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"/>
+                            <polyline points="12 19 5 12 12 5"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                    
+                    <div class="post-category">Programming</div>
+                    <h1>My Java Learning Journey: From Confusion to Confidence</h1>
+                    
+                    <div class="post-meta">
+                        <time datetime="2026-02-20">February 20, 2026</time>
+                        <span class="dot"></span>
+                        <span>7 min read</span>
+                        <span class="dot"></span>
+                        <span>By Anjana Wijerathna</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content-wrapper">
+                <div class="container">
+                    <div class="post-body">
+                        <p class="post-excerpt">Java was the first "serious" programming language I learned. Here's how I navigated the learning curve, made mistakes, and eventually built projects that actually work.</p>
+                        
+                        <h2>Starting With Java</h2>
+                        
+                        <p>When I first encountered Java in my university curriculum, I'll admit I was overwhelmed. Having only worked with HTML, CSS, and a bit of JavaScript before, the idea of a compiled, object-oriented language felt like stepping into deep water.</p>
+                        
+                        <p>My first Java program was the classic "Hello, World!" but even that simple task introduced concepts I hadn't seen before: public static void main, String[] args, why does everything need to be in a class? The syntax felt verbose compared to Python or JavaScript, and I found myself questioning why we were learning this language at all.</p>
+                        
+                        <p>Looking back, I understand why Java was chosen as the teaching language. Its strict typing, clear structure, and extensive documentation make it excellent for learning programming fundamentals. But at the time, I just wanted to make something work.</p>
+                        
+                        <h2>The Struggle With Object-Oriented Programming</h2>
+                        
+                        <p>Classes, objects, inheritance, polymorphism, encapsulation - these words were thrown at me, and I understood them in theory but struggled to apply them in practice. Why do I need to create a class just to print something? What's the point of making a method private?</p>
+                        
+                        <p>I remember spending hours on what should have been a simple assignment. I had all the pieces, but I didn't understand how they fit together. My code was spaghetti - classes with thousands of lines, methods doing too many things, and variables named in ways only I could understand.</p>
+                        
+                        <p>The breakthrough came when I stopped thinking about OOP as rules to follow and started thinking about it as a way to model real-world things. A Person class with name and age properties. A BankAccount class with deposit and withdraw methods. Once I started seeing objects as representations of real entities, things clicked.</p>
+                        
+                        <h2>Resources That Helped Me</h2>
+                        
+                        <p>University lectures weren't enough. I needed multiple sources to understand concepts from different angles. Here's what worked for me:</p>
+                        
+                        <p><strong>Oracle's Official Java Tutorials:</strong> Boring, yes, but thorough. The official documentation taught me to read technical documentation, which is a skill in itself.</p>
+                        
+                        <p><strong>Bro Code on YouTube:</strong> His beginner-friendly tutorials helped reinforce concepts I learned in class. Watching someone code in real-time made abstract concepts more concrete.</p>
+                        
+                        <p><strong>Codewars and LeetCode:</strong> Practice problems were crucial. I started with easy challenges and gradually worked my way up. The repetition of writing code - even simple code - built muscle memory.</p>
+                        
+                        <p><strong>Stack Overflow:</strong> Not for copying code, but for understanding how other developers think about problems. Reading through discussions taught me different approaches to the same problem.</p>
+                        
+                        <h2>My First Real Project: AgroChain</h2>
+                        
+                        <p>Everything changed when we started the AgroChain project. It was a database management project for tracking agricultural products through the supply chain, and it required us to use Java with JDBC and Swing for the GUI.</p>
+                        
+                        <p>This project forced me to learn things I had been avoiding:</p>
+                        
+                        <p><strong>Database Connectivity:</strong> JDBC was intimidating at first. Connection strings, result sets, prepared statements - so many new concepts. But I realized that JDBC is just Java's way of talking to databases, and once I understood the flow (connect, query, process results, close), it became manageable.</p>
+                        
+                        <pre><code>public class DatabaseConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/agrochain";
+    private static final String USER = "root";
+    private static final String PASSWORD = "password";
+    
+    public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+    
+    public List<Product> getAllProducts() {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT * FROM products";
+        
+        try (Connection conn = getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+            
+            while (rs.next()) {
+                Product p = new Product(
+                    rs.getInt("id"),
+                    rs.getString("name"),
+                    rs.getString("origin")
+                );
+                products.add(p);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+}</code></pre>
+                        
+                        <p><strong>Swing GUI:</strong> Creating a graphical interface felt like design work combined with programming. Layout managers (BorderLayout, GridLayout, GridBagLayout) were confusing at first, but I learned to think of the GUI as a composition of components nested within containers.</p>
+                        
+                        <p><strong>Project Structure:</strong> The project taught me the importance of separating concerns. Instead of having everything in one file, we organized our code into packages: dao for database operations, model for data classes, view for GUI components, and controller for business logic.</p>
+                        
+                        <h2>Lessons That Stuck</h2>
+                        
+                        <p>Here's what I wish I knew when I started:</p>
+                        
+                        <p><strong>Start with the basics, but don't get stuck there.</strong> It's important to understand variables, loops, and conditionals, but you learn programming by programming. Build things, make mistakes, break code, fix it.</p>
+                        
+                        <p><strong>Read error messages carefully.</strong> Java's error messages are actually quite helpful once you learn to parse them. The line number tells you where the problem is, and the exception type tells you what went wrong.</p>
+                        
+                        <p><strong>Use meaningful variable names.</strong> `int x` tells you nothing. `int numberOfProducts` tells you everything. Your future self will thank you.</p>
+                        
+                        <p><strong>Comment why, not what.</strong> Code shows what happens; comments explain why. "Sort the list alphabetically" is obvious from the code. "Sorted by origin to match export documentation requirements" adds value.</p>
+                        
+                        <p><strong>Debug before asking for help.</strong> System.out.println() is your friend. I've solved countless bugs by adding print statements to trace the flow of execution.</p>
+                        
+                        <h2>Where I Am Now</h2>
+                        
+                        <p>Java is now my strongest language. I've built desktop applications, understand database operations, and can design object-oriented systems. The journey from confusion to confidence took about a year of consistent practice.</p>
+                        
+                        <p>The key was persistence. Some days, I'd stare at the screen for hours without progress. Other days, I'd have breakthroughs that made everything click. Both are part of the learning process.</p>
+                        
+                        <p>If you're learning Java right now and feeling frustrated, know that it gets easier. The syntax becomes natural, the concepts make sense, and eventually, you'll look back at your early code and wonder how you ever wrote something so confusing - but that's a sign of growth, not a reason to quit.</p>
+
+                    </div>
+
+                    <aside class="post-sidebar">
+                        <div class="author-card">
+                            <div class="author-avatar">A</div>
+                            <h4>Anjana Wijerathna</h4>
+                            <p>2nd Year BCS SE Student | Web Developer | Gamer</p>
+                            <a href="../about.html" class="author-link">View Profile</a>
+                        </div>
+
+                        <div class="share-section">
+                            <h4>Share This Post</h4>
+                            <div class="share-links">
+                                <a href="https://twitter.com/intent/tweet?text=My Java Learning Journey: From Confusion to Confidence&url=https://anjanadulan.github.io/posts/learning-java-journey.html" target="_blank" class="share-btn twitter">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                    Twitter
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://anjanadulan.github.io/posts/learning-java-journey.html" target="_blank" class="share-btn linkedin">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+            </div>
+            <p>Built with passion & coffee. &copy; 2026 Anjana Wijerathna.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

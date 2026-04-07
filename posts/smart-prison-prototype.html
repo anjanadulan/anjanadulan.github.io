@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building My First IoT Project: Smart Prison Prototype | DevBlog</title>
+    <meta name="description" content="A detailed walkthrough of my IoT journey - how I built the Smart Prison Prototype using Arduino, ESP8266, and various sensors. From concept to working prototype.">
+    <meta name="keywords" content="IoT project, Arduino, ESP8266, Smart Prison Prototype, sensors, security system">
+    <meta name="author" content="Anjana Wijerathna">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://anjanadulan.github.io/posts/smart-prison-prototype.html">
+    
+    <meta property="og:title" content="Building My First IoT Project: Smart Prison Prototype">
+    <meta property="og:description" content="A detailed walkthrough of my IoT journey - how I built the Smart Prison Prototype using Arduino and sensors.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://anjanadulan.github.io/posts/smart-prison-prototype.html">
+    <meta property="og:site_name" content="DevBlog">
+    <meta property="article:published_time" content="2026-03-15">
+    <meta property="article:author" content="Anjana Wijerathna">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Building My First IoT Project: Smart Prison Prototype",
+        "description": "A detailed walkthrough of my IoT journey - how I built the Smart Prison Prototype using Arduino and sensors.",
+        "author": {
+            "@type": "Person",
+            "name": "Anjana Wijerathna"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DevBlog",
+            "url": "https://anjanadulan.github.io/"
+        },
+        "datePublished": "2026-03-15"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="floating-particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="brand">
+                <span class="brand-icon">D</span>
+                <span class="brand-text">DevBlog</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../gaming.html" class="nav-link">Gaming</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="theme-btn" aria-label="Toggle theme">
+                <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main">
+        <article class="post-article">
+            <header class="post-header">
+                <div class="container">
+                    <a href="../index.html" class="back-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"/>
+                            <polyline points="12 19 5 12 12 5"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                    
+                    <div class="post-category">IoT</div>
+                    <h1>Building My First IoT Project: Smart Prison Prototype</h1>
+                    
+                    <div class="post-meta">
+                        <time datetime="2026-03-15">March 15, 2026</time>
+                        <span class="dot"></span>
+                        <span>10 min read</span>
+                        <span class="dot"></span>
+                        <span>By Anjana Wijerathna</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content-wrapper">
+                <div class="container">
+                    <div class="post-body">
+                        <p class="post-excerpt">My journey into the world of IoT started with a university project that turned into a deep dive into sensors, microcontrollers, and real-world applications. Here's how I built the Smart Prison Prototype from scratch.</p>
+                        
+                        <h2>The Beginning: How It All Started</h2>
+                        
+                        <p>When our university announced the IoT project assignment, I'll admit I was intimidated. My experience was primarily in software - Java, JavaScript, PHP - and hardware felt like uncharted territory. But sometimes the best learning happens when you're pushed outside your comfort zone.</p>
+                        
+                        <p>The project brief was open-ended: create an IoT-based system that solves a real-world problem. After brainstorming sessions with my teammates, we settled on a security monitoring system for correctional facilities. It was ambitious, but that's exactly the kind of challenge I thrive on.</p>
+                        
+                        <h2>Understanding the Requirements</h2>
+                        
+                        <p>Before touching any hardware, we spent two weeks researching prison security systems. We looked at existing solutions, identified gaps, and imagined what a modern, technology-enhanced security system could look like.</p>
+                        
+                        <p>Our core requirements were:</p>
+                        
+                        <ul>
+                            <li><strong>Motion Detection:</strong> Detect unauthorized movement in restricted areas</li>
+                            <li><strong>Door/Window Monitoring:</strong> Track the status of all access points</li>
+                            <li><strong>Real-time Alerts:</strong> Immediate notification when security is compromised</li>
+                            <li><strong>Camera Integration:</strong> Visual verification of alerts</li>
+                            <li><strong>Central Dashboard:</strong> A unified view of all sensors and their status</li>
+                        </ul>
+                        
+                        <p>This wasn't going to be a simple temperature monitor - we needed a comprehensive system that could actually demonstrate the principles of IoT security.</p>
+                        
+                        <h2>The Hardware: Choosing Components</h2>
+                        
+                        <p>For the microcontroller, we went with Arduino Uno as our primary board. It's beginner-friendly, has extensive documentation, and there's a massive community for troubleshooting. We also incorporated ESP8266 modules for WiFi connectivity, which was crucial for our remote monitoring requirements.</p>
+                        
+                        <p>Here's the sensor lineup we assembled:</p>
+                        
+                        <p><strong>PIR Motion Sensors (HC-SR501):</strong> These Passive Infrared sensors became our primary motion detection tools. They detect changes in infrared radiation, which translates to body heat movement. We calibrated the sensitivity and delay time using potentiometers on the board.</p>
+                        
+                        <p><strong>Magnetic Door/Window Sensors:</strong> These simple but effective devices consist of a reed switch and a magnet. When the door opens, the magnetic field breaks, triggering an alert. Installation was straightforward - we just needed to ensure proper alignment.</p>
+                        
+                        <p><strong>Sound Sensors:</strong> For detecting unusual noises (breaking glass, raised voices), we added KY-038 sound sensor modules. These have a digital output for threshold detection and an analog output for monitoring sound levels.</p>
+                        
+                        <p><strong>Temperature/Humidity Sensor (DHT11):</strong> While not strictly for security, monitoring environmental conditions helped us ensure the equipment operated within safe parameters.</p>
+                        
+                        <h2>The Circuit Design</h2>
+                        
+                        <p>Designing the circuit was where things got interesting. We created a modular design where each sensor type connected to dedicated Arduino pins, allowing for easy expansion and troubleshooting.</p>
+                        
+                        <pre><code>// Pin Configuration
+const int pirPin = 2;        // Motion sensor
+const int doorPin = 3;       // Door sensor
+const int soundPin = A0;     // Sound sensor analog
+const int ledPin = 13;       // Status LED
+const int buzzerPin = 4;     // Alarm buzzer</code></pre>
+                        
+                        <p>We breadboarded the initial prototype, which let us test different configurations quickly. The lesson here? Never rush into soldering. Breadboard everything first and validate your assumptions.</p>
+                        
+                        <h2>Writing the Code</h2>
+                        
+                        <p>The software side of things felt more familiar. We wrote the Arduino sketch in C/C++, keeping the code modular and well-commented for future reference.</p>
+                        
+                        <p>The main loop became our central logic hub:</p>
+                        
+                        <pre><code>void loop() {
+    checkMotion();
+    checkDoors();
+    checkSound();
+    updateDisplay();
+    sendData();
+    
+    delay(1000); // 1 second polling interval
+}</code></pre>
+                        
+                        <p>For the ESP8266 integration, we implemented a simple HTTP client that sent sensor data to a local server. The WiFi connection logic required careful handling of disconnections and automatic reconnection.</p>
+                        
+                        <h2>Challenges We Faced</h2>
+                        
+                        <p>No project is without its hurdles. Here are the main challenges we encountered:</p>
+                        
+                        <p><strong>False Positives:</strong> The PIR sensors were incredibly sensitive initially. Shadows, air conditioning airflow, even a cat passing by would trigger alarms. We solved this by adjusting the sensitivity and implementing a debounce mechanism in code that required sustained motion before alerting.</p>
+                        
+                        <p><strong>WiFi Reliability:</strong> The ESP8266 would occasionally drop connections, especially in areas with WiFi congestion. We implemented a watchdog timer that automatically reset the module if it couldn't maintain a connection for more than 30 seconds.</p>
+                        
+                        <p><strong>Power Management:</strong> Running multiple sensors simultaneously drew more current than our USB power source could reliably provide. We had to add capacitors to smooth out power delivery and carefully sequence sensor readings.</p>
+                        
+                        <p><strong>Cable Management:</strong> In a prototype environment with multiple sensors, cable spaghetti is a real problem. We learned the value of organizing wires early and using cable ties to maintain clarity.</p>
+                        
+                        <h2>The Dashboard: Bringing It Together</h2>
+                        
+                        <p>The hardware was only half the battle. We needed a way to visualize and interact with our system. We built a simple web dashboard using HTML, CSS, and JavaScript that displayed:</p>
+                        
+                        <ul>
+                            <li>Real-time sensor status for each zone</li>
+                            <li>Historical data charts</li>
+                            <li>Alert log with timestamps</li>
+                            <li>Camera feed integration</li>
+                            <li>Manual override controls</li>
+                        </ul>
+                        
+                        <p>The dashboard connected to our Arduino via serial communication (for the prototype) and HTTP requests (for the ESP8266 version). Seeing all our sensors reporting live was incredibly satisfying.</p>
+                        
+                        <h2>Lessons Learned</h2>
+                        
+                        <p>This project taught me things no textbook could:</p>
+                        
+                        <p><strong>Hardware requires patience:</strong> Unlike software where you can instantly edit and redeploy, hardware changes take time. Debugging a circuit is different from debugging code, and I had to develop new intuition for reading schematics and using a multimeter.</p>
+                        
+                        <p><strong>Documentation is crucial:</strong> We documented everything - pin configurations, sensor specifications, code comments. This proved invaluable when troubleshooting and when explaining our system to the project evaluators.</p>
+                        
+                        <p><strong>Simplicity wins:</strong> Our initial design was overengineered. We scaled back to essentials and made it work before adding complexity. This approach saved us countless hours.</p>
+                        
+                        <p><strong>Community is everything:</strong> The Arduino and ESP8266 communities are incredibly helpful. When we got stuck, forums and tutorials pointed us in the right direction. I made sure to contribute back by documenting our solutions.</p>
+                        
+                        <h2>What's Next</h2>
+                        
+                        <p>While the prototype met our course requirements, I see so many possibilities for expansion. Machine learning for better motion classification, LoRa for longer-range communication, mobile app integration - the roadmap is exciting.</p>
+                        
+                        <p>This project sparked a genuine interest in IoT for me. I've since started experimenting with home automation projects, applying lessons learned here. Sometimes one university project can redirect your entire trajectory.</p>
+                        
+                        <p>If you're considering an IoT project, my advice is simple: start small, break things, learn from it, and don't be afraid to ask for help. The community is there, the resources exist, and the satisfaction of seeing your creation interact with the physical world is unmatched.</p>
+
+                    </div>
+
+                    <aside class="post-sidebar">
+                        <div class="author-card">
+                            <div class="author-avatar">A</div>
+                            <h4>Anjana Wijerathna</h4>
+                            <p>2nd Year BCS SE Student | Web Developer | Gamer</p>
+                            <a href="../about.html" class="author-link">View Profile</a>
+                        </div>
+
+                        <div class="share-section">
+                            <h4>Share This Post</h4>
+                            <div class="share-links">
+                                <a href="https://twitter.com/intent/tweet?text=Building My First IoT Project: Smart Prison Prototype&url=https://anjanadulan.github.io/posts/smart-prison-prototype.html" target="_blank" class="share-btn twitter">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                    Twitter
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://anjanadulan.github.io/posts/smart-prison-prototype.html" target="_blank" class="share-btn linkedin">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+            </div>
+            <p>Built with passion & coffee. &copy; 2026 Anjana Wijerathna.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

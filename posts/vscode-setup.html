@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My VS Code Setup: Extensions, Themes, and Productivity | DevBlog</title>
+    <meta name="description" content="A detailed look at my VS Code configuration - the extensions I use, theme choices, keyboard shortcuts, and settings that boost my productivity.">
+    <meta name="keywords" content="VS Code, VS Code extensions, code editor setup, productivity, developer tools">
+    <meta name="author" content="Anjana Wijerathna">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://anjanadulan.github.io/posts/vscode-setup.html">
+    
+    <meta property="og:title" content="My VS Code Setup: Extensions, Themes, and Productivity">
+    <meta property="og:description" content="A detailed look at my VS Code configuration - extensions, themes, shortcuts.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://anjanadulan.github.io/posts/vscode-setup.html">
+    <meta property="og:site_name" content="DevBlog">
+    <meta property="article:published_time" content="2026-01-15">
+    <meta property="article:author" content="Anjana Wijerathna">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "My VS Code Setup: Extensions, Themes, and Productivity",
+        "description": "A detailed look at my VS Code configuration - extensions, themes, shortcuts.",
+        "author": {
+            "@type": "Person",
+            "name": "Anjana Wijerathna"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DevBlog",
+            "url": "https://anjanadulan.github.io/"
+        },
+        "datePublished": "2026-01-15"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="floating-particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="brand">
+                <span class="brand-icon">D</span>
+                <span class="brand-text">DevBlog</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../gaming.html" class="nav-link">Gaming</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="theme-btn" aria-label="Toggle theme">
+                <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main">
+        <article class="post-article">
+            <header class="post-header">
+                <div class="container">
+                    <a href="../index.html" class="back-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"/>
+                            <polyline points="12 19 5 12 12 5"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                    
+                    <div class="post-category dev">Dev Tools</div>
+                    <h1>My VS Code Setup: Extensions, Themes, and Productivity</h1>
+                    
+                    <div class="post-meta">
+                        <time datetime="2026-01-15">January 15, 2026</time>
+                        <span class="dot"></span>
+                        <span>7 min read</span>
+                        <span class="dot"></span>
+                        <span>By Anjana Wijerathna</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content-wrapper">
+                <div class="container">
+                    <div class="post-body">
+                        <p class="post-excerpt">VS Code is my second home. Here's my complete setup that took months to refine - extensions that actually help, a theme that's easy on the eyes, and settings that speed up my workflow.</p>
+                        
+                        <h2>Why I Chose VS Code</h2>
+                        
+                        <p>I tried Sublime Text first. It was fast and lightweight, but the plugin ecosystem felt scattered. Then came Atom, which was more modern but slower than I wanted. Finally, VS Code - Microsoft's free, open-source editor that strikes the perfect balance.</p>
+                        
+                        <p>VS Code has excellent Git integration, a powerful extension marketplace, IntelliSense for smart code completion, and integrated terminal. It's customizable without being overwhelming, and it runs well even on my laptop.</p>
+                        
+                        <h2>The Theme: Dracula Official</h2>
+                        
+                        <p>I stare at my code editor for hours. The theme matters more than most people think. After trying dozens, I settled on Dracula Official.</p>
+                        
+                        <p>Why Dracula? The syntax highlighting is distinct and beautiful. Comments are muted but readable. Strings are distinguishable from functions at a glance. The background is dark enough to reduce eye strain but not pure black, which feels harsh.</p>
+                        
+                        <p>My settings.json tweaks for the theme:</p>
+                        
+                        <pre><code>{
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 24,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on"
+}</code></pre>
+                        
+                        <p>Fira Code with ligatures is beautiful. Ligatures combine common character combinations (like => or !==) into single, more readable glyphs.</p>
+                        
+                        <h2>Essential Extensions</h2>
+                        
+                        <p><strong>Prettier - Code Formatter:</strong> The one extension everyone needs. Prettier enforces consistent formatting across your team. I set it to format on save, so my code is always clean without effort.</p>
+                        
+                        <p><strong>ESLint:</strong> Catches syntax errors and enforces best practices in JavaScript. It nags me about unused variables and missing semicolons, but that's why my code is clean.</p>
+                        
+                        <p><strong>GitLens:</strong> Supercharges the built-in Git integration. I can see who last modified a line, browse commit history visually, and compare branches without leaving the editor.</p>
+                        
+                        <p><strong>Live Server:</strong> For web development, this is gold. It launches a local development server with live reload. Every time I save an HTML or CSS file, the browser updates automatically.</p>
+                        
+                        <p><strong>Auto Rename Tag:</strong> When I rename an HTML opening tag, it automatically renames the closing tag. Such a simple thing, but it eliminates a common source of bugs.</p>
+                        
+                        <p><strong>Bracket Pair Colorizer 2:</strong> Makes matching brackets have the same color. In deeply nested code, this is a lifesaver for seeing where blocks start and end.</p>
+                        
+                        <p><strong>Path Intellisense:</strong> Autocompletes filenames when importing. Type <code>import something from './</code> and it shows all files in that directory.</p>
+                        
+                        <p><strong>Error Lens:</strong> Shows errors and warnings inline rather than just in the problems panel. Errors are impossible to ignore.</p>
+                        
+                        <h2>Productivity Extensions</h2>
+                        
+                        <p><strong>Turbo Console Log:</strong> Select a variable, press Ctrl+Alt+L, and it creates a console.log statement. Saves time when debugging.</p>
+                        
+                        <p><strong>Todo Tree:</strong> Finds all TODO and FIXME comments in your code and displays them in a tree view. Great for tracking things you need to come back to.</p>
+                        
+                        <p><strong>GitHub Copilot:</strong> AI-powered code completion that suggests entire lines or functions based on context. It's like having a pair programmer. Not perfect, but often helpful.</p>
+                        
+                        <p><strong>Bookmarks:</strong> Mark important lines and jump between them with keyboard shortcuts. Essential for navigating large files.</p>
+                        
+                        <h2>Language-Specific Extensions</h2>
+                        
+                        <p>Beyond the general extensions, I have language-specific tools:</p>
+                        
+                        <ul>
+                            <li><strong>Java Extension Pack:</strong> For Java development with debugging and IntelliSense</li>
+                            <li><strong>PHP IntelliSense:</strong> Autocomplete and refactoring for PHP</li>
+                            <li><strong>Python:</strong> Microsoft's official Python extension for data science and automation</li>
+                            <li><strong>Live Sass Compiler:</strong> Compiles Sass/SCSS to CSS in real-time</li>
+                        </ul>
+                        
+                        <h2>My Key Keyboard Shortcuts</h2>
+                        
+                        <p>Mouse is slow. Learning keyboard shortcuts changed my coding speed dramatically.</p>
+                        
+                        <pre><code>Ctrl + P           # Quick Open file
+Ctrl + Shift + P   # Command Palette
+Ctrl + D           # Select next occurrence of word
+Ctrl + Shift + L   # Select all occurrences
+Alt + Up/Down      # Move line up/down
+Ctrl + /           # Toggle comment
+Ctrl + B           # Toggle sidebar
+Ctrl + J           # Toggle terminal
+Ctrl + K Ctrl + S  # Keyboard Shortcuts</code></pre>
+                        
+                        <p>The most impactful shortcuts are Quick Open (Ctrl+P) and multi-cursor editing (Ctrl+D). I use them hundreds of times daily.</p>
+                        
+                        <h2>My settings.json</h2>
+                        
+                        <p>Here's the full configuration I use. You can access this via Command Palette > Preferences: Open Settings (JSON):</p>
+                        
+                        <pre><code>{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "terminal.integrated.fontSize": 13,
+  "workbench.colorTheme": "Dracula",
+  "explorer.confirmDelete": false,
+  "git.enableSmartCommit": true
+}</code></pre>
+                        
+                        <p>The important ones: format on save (no手动 formatting), no minimap (personal preference, some love it), word wrap for long lines, auto save after 1 second delay.</p>
+                        
+                        <h2>Workspace Settings</h2>
+                        
+                        <p>Beyond user settings, I use workspace-specific settings for some projects. Create a .vscode folder in your project with settings.json to override global settings for that project.</p>
+                        
+                        <p>This is useful when different projects have different formatting rules or need specific extensions enabled.</p>
+                        
+                        <h2>The Terminal Setup</h2>
+                        
+                        <p>VS Code's integrated terminal is powerful. I use PowerShell on Windows with Oh My Posh for a custom prompt that shows Git branch, Python virtual environment, and other useful info.</p>
+                        
+                        <p>A good terminal setup matters because you'll spend significant time there - running builds, Git commands, npm scripts, and server processes.</p>
+                        
+                        <h2>Final Thoughts</h2>
+                        
+                        <p>Your editor setup should evolve. What works for me might not work for you. The key is experimenting: try an extension for a week, keep it if it helps, remove it if not.</p>
+                        
+                        <p>Invest time in learning your tools. The 30 minutes you spend memorizing shortcuts will pay back hours over the months and years you'll use the editor.</p>
+
+                    </div>
+
+                    <aside class="post-sidebar">
+                        <div class="author-card">
+                            <div class="author-avatar">A</div>
+                            <h4>Anjana Wijerathna</h4>
+                            <p>2nd Year BCS SE Student | Web Developer | Gamer</p>
+                            <a href="../about.html" class="author-link">View Profile</a>
+                        </div>
+
+                        <div class="share-section">
+                            <h4>Share This Post</h4>
+                            <div class="share-links">
+                                <a href="https://twitter.com/intent/tweet?text=My VS Code Setup: Extensions, Themes, and Productivity&url=https://anjanadulan.github.io/posts/vscode-setup.html" target="_blank" class="share-btn twitter">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                    Twitter
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://anjanadulan.github.io/posts/vscode-setup.html" target="_blank" class="share-btn linkedin">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+            </div>
+            <p>Built with passion & coffee. &copy; 2026 Anjana Wijerathna.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
