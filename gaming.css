@@ -1,0 +1,468 @@
+/* Gaming Hero */
+.gaming-hero {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+[data-theme="dark"] .gaming-hero {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+/* Gaming Content */
+.gaming-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-bottom: 80px;
+}
+
+/* Profiles Section */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.profile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.profile-icon.steam {
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+    color: #fff;
+}
+
+.profile-icon.youtube {
+    background: #ff0000;
+    color: #fff;
+}
+
+.profile-icon.discord {
+    background: #5865f2;
+    color: #fff;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.profile-info p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.view-badge {
+    padding: 6px 14px;
+    background: var(--bg-secondary);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.profile-card:hover .view-badge {
+    background: var(--accent);
+    color: white;
+}
+
+/* Games Section */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.game-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.game-cover {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.game-logo {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-logo span {
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.valorant-bg {
+    background: linear-gradient(135deg, #1a1a2e, #ff4655);
+}
+
+.ml-bg {
+    background: linear-gradient(135deg, #1e3a5f, #00d4ff);
+}
+
+.gta-bg {
+    background: linear-gradient(135deg, #1b3a4b, #4dd0e1);
+}
+
+.mc-bg {
+    background: linear-gradient(135deg, #3d6b3d, #7c4dff);
+}
+
+.fn-bg {
+    background: linear-gradient(135deg, #1a1a4e, #00bcd4);
+}
+
+.au-bg {
+    background: linear-gradient(135deg, #c62828, #ff7043);
+}
+
+.game-info {
+    padding: 16px;
+}
+
+.game-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.game-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Setup Preview */
+.setup-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.setup-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.setup-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.setup-info {
+    flex: 1;
+}
+
+.setup-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.setup-info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.setup-arrow {
+    color: var(--text-tertiary);
+    transition: all 0.2s ease;
+}
+
+.setup-card:hover .setup-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: var(--bg-card);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--border);
+    color: var(--text-primary);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.modal-icon.steam {
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+}
+
+.modal-icon.youtube {
+    background: #ff0000;
+}
+
+.modal-icon.discord {
+    background: #5865f2;
+}
+
+.modal-title {
+    flex: 1;
+}
+
+.modal-title h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.modal-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-badge.steam {
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+}
+
+.modal-badge.youtube {
+    background: #ff0000;
+}
+
+.modal-badge.discord {
+    background: #5865f2;
+}
+
+.modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    max-height: calc(85vh - 120px);
+}
+
+.modal-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.spec-group {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.spec-group h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spec-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.spec-detail:last-child {
+    border-bottom: none;
+}
+
+.spec-name {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.spec-info {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: right;
+}
+
+.modal-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.modal-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.modal-link-btn.steam {
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+}
+
+.modal-link-btn.youtube {
+    background: #ff0000;
+}
+
+.modal-link-btn.discord {
+    background: #5865f2;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .profiles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .setup-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .setup-arrow {
+        display: none;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}

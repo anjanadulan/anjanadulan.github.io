@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Setup | Anjana Wijerathna</title>
+    <meta name="description" content="Gaming setup and peripherals of Anjana Wijerathna">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gaming.css">
+    <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">A</span>
+                <span class="brand-text">Anjana</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="gaming.html" class="nav-link active">Gaming</a>
+            </div>
+            
+            <button class="theme-btn" aria-label="Toggle theme">
+                <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section class="setup-hero">
+        <div class="setup-hero-content">
+            <div class="setup-icon-large">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </div>
+            <h1>My Gaming Setup</h1>
+            <p>Complete breakdown of my gaming machines and peripherals</p>
+        </div>
+    </section>
+
+    <div class="setup-container">
+        <div class="setup-main">
+            <section class="setup-section">
+                <h2 class="setup-section-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    Laptop
+                </h2>
+                <div class="device-card laptop" onclick="openModal('laptop-modal')">
+                    <div class="device-header">
+                        <div class="device-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="device-title">
+                            <h3>HP Victus 15-fb2063dx</h3>
+                            <span class="device-badge">Primary</span>
+                        </div>
+                        <span class="view-details-badge">View Details</span>
+                    </div>
+                    <div class="device-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Processor</span>
+                            <span class="spec-value">AMD Ryzen 5 7535HS</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Graphics</span>
+                            <span class="spec-value">AMD RX 6550M 4GB</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">16 GB DDR5 4800MT/s</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Storage</span>
+                            <span class="spec-value">512 GB NVMe SSD</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Display</span>
+                            <span class="spec-value">15.6" FHD 144Hz</span>
+                        </div>
+                    </div>
+                    <p class="device-desc">My go-to laptop for gaming on the move. Handles most games smoothly with good thermal management.</p>
+                </div>
+            </section>
+
+            <section class="setup-section">
+                <h2 class="setup-section-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                        <line x1="2" y1="9" x2="2" y2="9"/>
+                        <line x1="2" y1="11" x2="2" y2="11"/>
+                    </svg>
+                    Desktop PC
+                </h2>
+                <div class="device-card desktop" onclick="openModal('desktop-modal')">
+                    <div class="device-header">
+                        <div class="device-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                                <rect x="6" y="6" width="12" height="8" rx="1"/>
+                            </svg>
+                        </div>
+                        <div class="device-title">
+                            <h3>Custom Desktop Build</h3>
+                            <span class="device-badge secondary">Home Setup</span>
+                        </div>
+                        <span class="view-details-badge">View Details</span>
+                    </div>
+                    <div class="device-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Processor</span>
+                            <span class="spec-value">AMD Ryzen 3 3200G</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Graphics</span>
+                            <span class="spec-value">AMD Radeon Vega 8 (IGPU)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">16 GB DDR4</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Storage</span>
+                            <span class="spec-value">2 TB HDD</span>
+                        </div>
+                    </div>
+                    <p class="device-desc">My home battlestation. Great for casual gaming and everyday tasks with the integrated graphics.</p>
+                </div>
+            </section>
+
+            <section class="setup-section">
+                <h2 class="setup-section-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="6" width="20" height="12" rx="2"/>
+                        <circle cx="6" cy="12" r="2"/>
+                        <circle cx="18" cy="12" r="2"/>
+                    </svg>
+                    Peripherals
+                </h2>
+                <div class="peripherals-grid">
+                    <div class="peripheral-card" onclick="openModal('mouse-modal')">
+                        <div class="peripheral-icon mouse">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                                <circle cx="6" cy="12" r="2"/>
+                                <circle cx="18" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="peripheral-info">
+                            <h4>Gamdias Zeus E2</h4>
+                            <p>Gaming Mouse</p>
+                        </div>
+                        <span class="view-details-badge small">View</span>
+                    </div>
+
+                    <div class="peripheral-card" onclick="openModal('keyboard-modal')">
+                        <div class="peripheral-icon keyboard">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                                <line x1="6" y1="10" x2="6" y2="10"/>
+                                <line x1="10" y1="10" x2="10" y2="10"/>
+                                <line x1="14" y1="10" x2="14" y2="10"/>
+                                <line x1="18" y1="10" x2="18" y2="10"/>
+                                <line x1="8" y1="14" x2="16" y2="14"/>
+                            </svg>
+                        </div>
+                        <div class="peripheral-info">
+                            <h4>Gamdias Ares M2</h4>
+                            <p>Mechanical Keyboard</p>
+                        </div>
+                        <span class="view-details-badge small">View</span>
+                    </div>
+
+                    <div class="peripheral-card" onclick="openModal('headset-modal')">
+                        <div class="peripheral-icon headset">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                <line x1="12" y1="19" x2="12" y2="23"/>
+                                <line x1="8" y1="23" x2="16" y2="23"/>
+                            </svg>
+                        </div>
+                        <div class="peripheral-info">
+                            <h4>Fantech Orbit HG25</h4>
+                            <p>Gaming Headset</p>
+                        </div>
+                        <span class="view-details-badge small">View</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="back-link-container">
+                <a href="gaming.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Back to Gaming Hub
+                </a>
+            </div>
+        </div>
+
+        <aside class="setup-sidebar">
+            <div class="setup-summary-card">
+                <h3>Setup Overview</h3>
+                <div class="summary-list">
+                    <div class="summary-item">
+                        <span class="summary-icon laptop-icon"></span>
+                        <span>HP Victus 15-fb2063dx</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon desktop-icon"></span>
+                        <span>Ryzen 3 3200G PC</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon mouse-icon"></span>
+                        <span>Gamdias Zeus E2</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon keyboard-icon"></span>
+                        <span>Gamdias Ares M2</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon headset-icon"></span>
+                        <span>Fantech Orbit HG25</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div id="laptop-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('laptop-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon laptop">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>HP Victus 15-fb2063dx</h2>
+                    <span class="modal-badge">Gaming Laptop</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="spec-image">
+                    <img src="https://hp.widen.net/content/bwkyx73983/original/bwkyx73983.png" alt="HP Victus Gaming Laptop" onerror="this.src='https://picsum.photos/seed/victus/600/400'">
+                </div>
+                <div class="spec-group">
+                    <h3>Processor</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">CPU</span>
+                        <span class="spec-info">AMD Ryzen 5 7535HS</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Architecture</span>
+                        <span class="spec-info">Zen 3+ Rembrandt</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Cores/Threads</span>
+                        <span class="spec-info">6 Cores / 12 Threads</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Base Clock</span>
+                        <span class="spec-info">3.3 GHz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Boost Clock</span>
+                        <span class="spec-info">4.55 GHz</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Graphics</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">GPU</span>
+                        <span class="spec-info">AMD Radeon RX 6550M</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">VRAM</span>
+                        <span class="spec-info">4 GB GDDR6</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Architecture</span>
+                        <span class="spec-info">RDNA 2</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">TDP</span>
+                        <span class="spec-info">50W</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Memory & Storage</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">RAM</span>
+                        <span class="spec-info">16 GB DDR5 4800MT/s</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Storage</span>
+                        <span class="spec-info">512 GB NVMe PCIe SSD</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Expandable</span>
+                        <span class="spec-info">Yes, up to 32GB</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Display</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Screen Size</span>
+                        <span class="spec-info">15.6 inches</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Resolution</span>
+                        <span class="spec-info">1920 x 1080 (FHD)</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Refresh Rate</span>
+                        <span class="spec-info">144 Hz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Panel Type</span>
+                        <span class="spec-info">IPS, Anti-glare</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Other Features</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">OS</span>
+                        <span class="spec-info">Windows 11 Home</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Battery</span>
+                        <span class="spec-info">52.5 Wh Li-ion</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-info">2.3 kg</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Backlit Keyboard</span>
+                        <span class="spec-info">Yes, RGB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="desktop-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('desktop-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon desktop">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                        <rect x="6" y="6" width="12" height="8" rx="1"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>Custom Desktop Build</h2>
+                    <span class="modal-badge secondary">Home Setup</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="spec-image">
+                    <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600&h=400&fit=crop" alt="Custom Desktop PC Build">
+                </div>
+                <div class="spec-group">
+                    <h3>Processor</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">CPU</span>
+                        <span class="spec-info">AMD Ryzen 3 3200G</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Architecture</span>
+                        <span class="spec-info">Zen+ Picasso</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Cores/Threads</span>
+                        <span class="spec-info">4 Cores / 4 Threads</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Base Clock</span>
+                        <span class="spec-info">3.5 GHz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Boost Clock</span>
+                        <span class="spec-info">3.7 GHz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">TDP</span>
+                        <span class="spec-info">65W</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Graphics (Integrated)</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">iGPU</span>
+                        <span class="spec-info">AMD Radeon Vega 8</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Cores</span>
+                        <span class="spec-info">8 Compute Units</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">GPU Clock</span>
+                        <span class="spec-info">1250 MHz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Usage</span>
+                        <span class="spec-info">Casual gaming, Media</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Memory & Storage</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">RAM</span>
+                        <span class="spec-info">16 GB DDR4-2933</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Storage</span>
+                        <span class="spec-info">2 TB HDD (7200 RPM)</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Type</span>
+                        <span class="spec-info">Desktop Form Factor</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Build Notes</h3>
+                    <p class="build-notes">A budget-friendly build perfect for everyday tasks, light gaming, and productivity. The integrated Vega 8 graphics handles older titles and esports games at low settings. Great value for money with upgrade potential for a discrete GPU in the future.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mouse-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('mouse-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon mouse">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="6" width="20" height="12" rx="2"/>
+                        <circle cx="6" cy="12" r="2"/>
+                        <circle cx="18" cy="12" r="2"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>Gamdias Zeus E2</h2>
+                    <span class="modal-badge mouse">RGB Gaming Mouse</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="spec-image">
+                    <img src="https://gmedia.playstation.com/is/image/SIEPDC/gaming-mouse-remote-play-01-ps5-01-en-12oct20?w=600" alt="Gaming Mouse" onerror="this.src='https://picsum.photos/seed/mouse/600/400'">
+                </div>
+                <div class="spec-group">
+                    <h3>General</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Brand</span>
+                        <span class="spec-info">Gamdias</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Model</span>
+                        <span class="spec-info">Zeus E2</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Type</span>
+                        <span class="spec-info">Wired Optical Gaming Mouse</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Sensor & Performance</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Sensor</span>
+                        <span class="spec-info">Optical Sensor</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">DPI</span>
+                        <span class="spec-info">Up to 3200 DPI</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Polling Rate</span>
+                        <span class="spec-info">125/250/500/1000 Hz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">IPS</span>
+                        <span class="spec-info">60 IPS</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Design</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Buttons</span>
+                        <span class="spec-info">6 Programmable Buttons</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Lighting</span>
+                        <span class="spec-info">RGB Backlit (7 Colors)</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Cable</span>
+                        <span class="spec-info">Braided USB Cable</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-info">~95g (Lightweight)</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Features</h3>
+                    <ul class="feature-list">
+                        <li>Ergonomic design for comfortable grip</li>
+                        <li>RGB breathing light effects</li>
+                        <li>On-the-fly DPI switching</li>
+                        <li>Durable Omron switches</li>
+                        <li>Smooth teflon feet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="keyboard-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('keyboard-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon keyboard">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="6" width="20" height="12" rx="2"/>
+                        <line x1="6" y1="10" x2="6" y2="10"/>
+                        <line x1="10" y1="10" x2="10" y2="10"/>
+                        <line x1="14" y1="10" x2="14" y2="10"/>
+                        <line x1="18" y1="10" x2="18" y2="10"/>
+                        <line x1="8" y1="14" x2="16" y2="14"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>Gamdias Ares M2</h2>
+                    <span class="modal-badge keyboard">Mechanical Keyboard</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="spec-image">
+                    <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/3a2beda6-8c3c-41a4-ae3d-62f6f3a7e0e4.__CR0,0,970,600_PT0_SX970_V1___.jpg" alt="Mechanical Gaming Keyboard" onerror="this.src='https://picsum.photos/seed/keyboard/600/400'">
+                </div>
+                <div class="spec-group">
+                    <h3>General</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Brand</span>
+                        <span class="spec-info">Gamdias</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Model</span>
+                        <span class="spec-info">Ares M2</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Type</span>
+                        <span class="spec-info">Mechanical Gaming Keyboard</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Layout</span>
+                        <span class="spec-info">Full-size (104 keys)</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Switches</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Switch Type</span>
+                        <span class="spec-info">Outemu Blue (Mechanical)</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Actuation</span>
+                        <span class="spec-info">Tactile, Clicky</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Actuation Force</span>
+                        <span class="spec-info">60g</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Lifespan</span>
+                        <span class="spec-info">50 Million Keystrokes</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Design & Features</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Lighting</span>
+                        <span class="spec-info">RGB Backlit</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">N-Key Rollover</span>
+                        <span class="spec-info">Yes, Full NKRO</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Connection</span>
+                        <span class="spec-info">USB 2.0 Wired</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Cable</span>
+                        <span class="spec-info">Braided Cable</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Features</h3>
+                    <ul class="feature-list">
+                        <li>Durable mechanical switches with clicky feedback</li>
+                        <li>Customizable RGB lighting effects</li>
+                        <li>Anti-ghosting on all keys</li>
+                        <li>Removable keycaps for easy cleaning</li>
+                        <li>Compact & sturdy design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="headset-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('headset-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon headset">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="23"/>
+                        <line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>Fantech Orbit HG25</h2>
+                    <span class="modal-badge headset">RGB Gaming Headset</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="spec-image">
+                    <img src="https://m.media-amazon.com/images/I/71vWZp4eM3L._AC_SL1500_.jpg" alt="Gaming Headset" onerror="this.src='https://picsum.photos/seed/headset/600/400'">
+                </div>
+                <div class="spec-group">
+                    <h3>General</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Brand</span>
+                        <span class="spec-info">Fantech</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Model</span>
+                        <span class="spec-info">Orbit HG25</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Type</span>
+                        <span class="spec-info">Over-ear Gaming Headset</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Connection</span>
+                        <span class="spec-info">USB (RGB Power)</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Audio</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Driver Size</span>
+                        <span class="spec-info">50mm</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Frequency Response</span>
+                        <span class="spec-info">20Hz - 20kHz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Impedance</span>
+                        <span class="spec-info">32 Ohms</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Sensitivity</span>
+                        <span class="spec-info">112 dB</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Surround</span>
+                        <span class="spec-info">7.1 Virtual Surround</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Microphone</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Type</span>
+                        <span class="spec-info">Flexible Boom Mic</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Pickup Pattern</span>
+                        <span class="spec-info">Omnidirectional</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Mic Sensitivity</span>
+                        <span class="spec-info">-54 dB</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Design</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Lighting</span>
+                        <span class="spec-info">RGB LED</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Ear Cushions</span>
+                        <span class="spec-info">Memory Foam</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Headband</span>
+                        <span class="spec-info">Adjustable Padded</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-info">~300g</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Features</h3>
+                    <ul class="feature-list">
+                        <li>7.1 Virtual Surround Sound</li>
+                        <li>50mm drivers for immersive audio</li>
+                        <li>RGB lighting effects</li>
+                        <li>Flexible noise-canceling microphone</li>
+                        <li>Comfortable memory foam ear cushions</li>
+                        <li>In-line volume control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built with passion & coffee. &copy; 2026 Anjana Wijerathna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

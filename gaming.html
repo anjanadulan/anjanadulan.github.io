@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming | Anjana Wijerathna</title>
+    <meta name="description" content="Gaming setup, profiles, and favorite games of Anjana Wijerathna">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gaming.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">A</span>
+                <span class="brand-text">Anjana</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="gaming.html" class="nav-link active">Gaming</a>
+            </div>
+            
+            <button class="theme-btn" aria-label="Toggle theme">
+                <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="hero small gaming-hero">
+            <div class="hero-content">
+                <h1>
+                    <span class="line">My</span>
+                    <span class="name">Gaming Hub</span>
+                </h1>
+                <p class="bio">A collection of my gaming profiles, setup, and favorite games I play in my free time.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="gaming-content">
+                <!-- Profiles Section -->
+                <section class="profiles-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Gaming Profiles</h2>
+                        <span class="section-line"></span>
+                    </div>
+                    
+                    <div class="profiles-grid">
+                        <div class="profile-card steam" onclick="openModal('steam-modal')">
+                            <div class="profile-icon steam">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/>
+                                </svg>
+                            </div>
+                            <div class="profile-info">
+                                <h4>Steam</h4>
+                                <p>master1223</p>
+                            </div>
+                            <span class="view-badge">View</span>
+                        </div>
+
+                        <div class="profile-card youtube" onclick="openModal('youtube-modal')">
+                            <div class="profile-icon youtube">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                            <div class="profile-info">
+                                <h4>YouTube</h4>
+                                <p>Master Live</p>
+                            </div>
+                            <span class="view-badge">View</span>
+                        </div>
+
+                        <div class="profile-card discord" onclick="openModal('discord-modal')">
+                            <div class="profile-icon discord">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                                </svg>
+                            </div>
+                            <div class="profile-info">
+                                <h4>Discord</h4>
+                                <p>anju.2004</p>
+                            </div>
+                            <span class="view-badge">View</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Games Section -->
+                <section class="games-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Favorite Games</h2>
+                        <span class="section-line"></span>
+                    </div>
+                    
+                    <div class="games-grid">
+                        <div class="game-card" onclick="openModal('valorant-modal')">
+                            <div class="game-cover valorant-bg">
+                                <div class="game-logo">
+                                    <span>V</span>
+                                </div>
+                            </div>
+                            <div class="game-info">
+                                <h4>Valorant</h4>
+                                <p>Competitive FPS</p>
+                            </div>
+                        </div>
+
+                        <div class="game-card" onclick="openModal('mobilelegends-modal')">
+                            <div class="game-cover ml-bg">
+                                <div class="game-logo">
+                                    <span>ML</span>
+                                </div>
+                            </div>
+                            <div class="game-info">
+                                <h4>Mobile Legends</h4>
+                                <p>MOBA</p>
+                            </div>
+                        </div>
+
+                        <div class="game-card" onclick="openModal('gta-modal')">
+                            <div class="game-cover gta-bg">
+                                <div class="game-logo">
+                                    <span>GTA</span>
+                                </div>
+                            </div>
+                            <div class="game-info">
+                                <h4>GTA V</h4>
+                                <p>Open World</p>
+                            </div>
+                        </div>
+
+                        <div class="game-card" onclick="openModal('minecraft-modal')">
+                            <div class="game-cover mc-bg">
+                                <div class="game-logo">
+                                    <span>MC</span>
+                                </div>
+                            </div>
+                            <div class="game-info">
+                                <h4>Minecraft</h4>
+                                <p>Sandbox</p>
+                            </div>
+                        </div>
+
+                        <div class="game-card" onclick="openModal('fortnite-modal')">
+                            <div class="game-cover fn-bg">
+                                <div class="game-logo">
+                                    <span>FN</span>
+                                </div>
+                            </div>
+                            <div class="game-info">
+                                <h4>Fortnite</h4>
+                                <p>Battle Royale</p>
+                            </div>
+                        </div>
+
+                        <div class="game-card" onclick="openModal('amongus-modal')">
+                            <div class="game-cover au-bg">
+                                <div class="game-logo">
+                                    <span>AU</span>
+                                </div>
+                            </div>
+                            <div class="game-info">
+                                <h4>Among Us</h4>
+                                <p>Party Game</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Setup Preview -->
+                <section class="setup-preview">
+                    <div class="section-header">
+                        <h2 class="section-title">My Setup</h2>
+                        <span class="section-line"></span>
+                    </div>
+                    
+                    <a href="setup.html" class="setup-card">
+                        <div class="setup-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="setup-info">
+                            <h3>Gaming Setup 2024</h3>
+                            <p>HP Victus 15 + Desktop Build + Peripherals</p>
+                        </div>
+                        <span class="setup-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Steam Modal -->
+    <div id="steam-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('steam-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon steam">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0z"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>Steam Profile</h2>
+                    <span class="modal-badge steam">Steam</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">My main gaming platform where I play competitive titles and open world adventures. Currently based in Sri Lanka.</p>
+                <div class="spec-group">
+                    <h3>Profile Details</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Username</span>
+                        <span class="spec-info">master1223</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Display Name</span>
+                        <span class="spec-info">Anu >_<</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Location</span>
+                        <span class="spec-info">Sri Lanka</span>
+                    </div>
+                </div>
+                <a href="https://steamcommunity.com/id/master1223" target="_blank" class="modal-link-btn steam">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0z"/></svg>
+                    Visit Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Modal -->
+    <div id="youtube-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('youtube-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon youtube">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>YouTube Channel</h2>
+                    <span class="modal-badge youtube">YouTube</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">My YouTube channel where I share gaming content, highlights, and occasional tutorials. Subscribe for awesome content!</p>
+                <div class="spec-group">
+                    <h3>Channel Details</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Channel Name</span>
+                        <span class="spec-info">Master Live</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Channel ID</span>
+                        <span class="spec-info">@masterlive23</span>
+                    </div>
+                </div>
+                <a href="https://www.youtube.com/@masterlive23" target="_blank" class="modal-link-btn youtube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/></svg>
+                    Visit Channel
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discord Modal -->
+    <div id="discord-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('discord-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon discord">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/>
+                    </svg>
+                </div>
+                <div class="modal-title">
+                    <h2>Discord Profile</h2>
+                    <span class="modal-badge discord">Discord</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">Connect with me on Discord! Feel free to add me for gaming sessions, collaboration, or just to chat.</p>
+                <div class="spec-group">
+                    <h3>Profile Details</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Username</span>
+                        <span class="spec-info">anju.2004</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Status</span>
+                        <span class="spec-info">Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Modals -->
+    <div id="valorant-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('valorant-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #ff4655, #cc3a47);">
+                    <span style="font-weight: 800; font-size: 20px;">V</span>
+                </div>
+                <div class="modal-title">
+                    <h2>Valorant</h2>
+                    <span class="modal-badge">FPS Shooter</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">My main competitive FPS game. I love the tactical gameplay, unique agent abilities, and precise gunplay that Valorant offers.</p>
+                <div class="spec-group">
+                    <h3>System Requirements (Minimum)</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">OS</span>
+                        <span class="spec-info">Windows 10 (64-bit)</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">CPU</span>
+                        <span class="spec-info">Intel Core 2 Duo E8400 / AMD Athlon 200GE</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">RAM</span>
+                        <span class="spec-info">4 GB</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">GPU</span>
+                        <span class="spec-info">Intel HD 4000 / AMD Radeon R4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobilelegends-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('mobilelegends-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #00d4ff, #0099cc);">
+                    <span style="font-weight: 700; font-size: 14px;">ML</span>
+                </div>
+                <div class="modal-title">
+                    <h2>Mobile Legends</h2>
+                    <span class="modal-badge">MOBA</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">My go-to mobile MOBA game. Quick matches and intense 5v5 battles make it perfect for gaming on the go.</p>
+                <div class="spec-group">
+                    <h3>Requirements</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Platform</span>
+                        <span class="spec-info">Android / iOS</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Storage</span>
+                        <span class="spec-info">3 GB+</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Internet</span>
+                        <span class="spec-info">Stable Connection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gta-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('gta-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #4dd0e1, #00acc1);">
+                    <span style="font-weight: 800; font-size: 16px;">GTA</span>
+                </div>
+                <div class="modal-title">
+                    <h2>Grand Theft Auto V</h2>
+                    <span class="modal-badge">Open World</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">One of my favorite open world games. The story, graphics, and online multiplayer keep me coming back.</p>
+                <div class="spec-group">
+                    <h3>System Requirements (Minimum)</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">OS</span>
+                        <span class="spec-info">Windows 10 64-bit</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">CPU</span>
+                        <span class="spec-info">Intel Core 2 Quad Q6600 / AMD Phenom 9850</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">RAM</span>
+                        <span class="spec-info">8 GB</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">GPU</span>
+                        <span class="spec-info">NVIDIA 9800 GT / AMD HD 4870</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Storage</span>
+                        <span class="spec-info">72 GB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="minecraft-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('minecraft-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #7c4dff, #651fff);">
+                    <span style="font-weight: 800; font-size: 18px;">MC</span>
+                </div>
+                <div class="modal-title">
+                    <h2>Minecraft</h2>
+                    <span class="modal-badge">Sandbox</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">The ultimate sandbox experience. From building massive structures to exploring procedurally generated worlds, Minecraft never gets old.</p>
+                <div class="spec-group">
+                    <h3>System Requirements</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">OS</span>
+                        <span class="spec-info">Windows 10+ / macOS / Linux</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">CPU</span>
+                        <span class="spec-info">Intel Core i3-3210 / AMD A8-7600</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">RAM</span>
+                        <span class="spec-info">4 GB (8 GB recommended)</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">GPU</span>
+                        <span class="spec-info">Integrated HD 4000 / GTX 600 series</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fortnite-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('fortnite-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #00bcd4, #0097a7);">
+                    <span style="font-weight: 700; font-size: 14px;">FN</span>
+                </div>
+                <div class="modal-title">
+                    <h2>Fortnite</h2>
+                    <span class="modal-badge">Battle Royale</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">Fun battle royale with building mechanics. The constant updates and creative mode keep the game fresh and exciting.</p>
+                <div class="spec-group">
+                    <h3>System Requirements (Minimum)</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">OS</span>
+                        <span class="spec-info">Windows 10 64-bit</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">CPU</span>
+                        <span class="spec-info">Intel Core i3-3225 3.3 GHz</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">RAM</span>
+                        <span class="spec-info">8 GB</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">GPU</span>
+                        <span class="spec-info">Intel HD 4000 / GTX 660</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="amongus-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('amongus-modal')">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #ff7043, #e64a19);">
+                    <span style="font-weight: 800; font-size: 18px;">AU</span>
+                </div>
+                <div class="modal-title">
+                    <h2>Among Us</h2>
+                    <span class="modal-badge">Party Game</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">Perfect party game for hanging out with friends. The deception and deduction gameplay is endlessly entertaining.</p>
+                <div class="spec-group">
+                    <h3>Requirements</h3>
+                    <div class="spec-detail">
+                        <span class="spec-name">Platform</span>
+                        <span class="spec-info">PC / Mobile / Console</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Storage</span>
+                        <span class="spec-info">250 MB</span>
+                    </div>
+                    <div class="spec-detail">
+                        <span class="spec-name">Players</span>
+                        <span class="spec-info">4-15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built with passion & coffee. &copy; 2026 Anjana Wijerathna.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
