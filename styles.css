@@ -393,6 +393,10 @@ body {
     background: rgba(59, 130, 246, 0.8);
 }
 
+.post-category.webdev {
+    background: rgba(168, 85, 247, 0.8);
+}
+
 .post-content {
     padding: 24px;
     display: flex;
