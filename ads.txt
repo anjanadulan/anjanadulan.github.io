@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-google.com, pub-9111407247287494, DIRECT, f08c47fec0942fa0
-=======
-google.com, pub-9111407247287494, DIRECT, f08c47fec0942fa0
->>>>>>> ad1aba959a164a582a62bd3d48b55a039694b279
+google.com, pub-3283754693251898, DIRECT, f08c47fec0942fa0
