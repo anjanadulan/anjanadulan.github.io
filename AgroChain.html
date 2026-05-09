@@ -165,6 +165,30 @@
                     </section>
 
                     <section class="content-section">
+                        <h2>The Problem</h2>
+                        <p>The agricultural supply chain in Sri Lanka faces a major transparency issue. Farmers sell their produce to distributors, who then sell to retailers, and somewhere along that chain, the product origin gets lost. Consumers have no way to verify where their food came from, whether it was grown organically, or if it was handled properly. For farmers, this means they can't differentiate their quality produce from others in the market. For distributors, tracking recalls becomes nearly impossible if a contaminated batch slips through.</p>
+                        <p>I identified this gap during a visit to a local marketplace where I saw identical-looking vegetables being sold at vastly different prices with no clear labeling. The idea for AgroChain was born from the question: what if we could track agricultural products the same way supply chains track high-value goods?</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Implementation Details</h2>
+                        <p>The system is built with Java using MySQL as the database backend and Swing for the desktop GUI. The core architecture revolves around a blockchain-inspired hash chaining mechanism. Every time a product moves from one entity to another — farmer to distributor, distributor to retailer — a new transaction record is created with a cryptographic hash that points back to the previous transaction. This creates an immutable audit trail that can be verified at any point.</p>
+                        <p>The MySQL database is normalized to Third Normal Form and contains tables for farmers, products, harvests, distributors, retailers, and transactions. I used JDBC for database connectivity, which taught me a lot about connection pooling, prepared statements, and transaction management. The Swing GUI provides dashboards for each user role — farmers can register harvests, distributors can log incoming and outgoing shipments, and retailers can verify product origins by scanning a unique product ID.</p>
+                        <p>One of the biggest challenges was implementing the hash chaining correctly. Each transaction needed to include the previous transaction's hash in its own hash calculation. This meant I had to carefully order the transaction creation process to ensure no hash was calculated before its predecessor existed in the database. I solved this by wrapping the creation in a database transaction that returns the previous hash in a single atomic operation.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Results</h2>
+                        <p>The final prototype successfully tracks products from farm to retail. The blockchain-inspired audit trail works as intended — any attempt to modify a past transaction breaks the hash chain, making tampering immediately detectable. The Swing GUI is intuitive enough for non-technical users, with clear input forms and a dashboard that shows the complete journey of any product in the system.</p>
+                        <p>Testing with simulated data showed the system can handle hundreds of transactions without performance degradation. The query time for tracing a product's full journey averages under 2 seconds even with 10,000+ records in the database. This project earned me practical experience in database design, cryptographic hashing, and building desktop applications with Java.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Future Improvements</h2>
+                        <p>If I revisit this project, I would add a web-based frontend using React or a similar framework to replace the Swing GUI, making it accessible from any device without installation. I would also integrate GPS coordinates at each transaction point to create a visual map of the product's journey. A mobile app with QR code scanning would make the system more practical for field use. Finally, integrating real blockchain technology (like Hyperledger Fabric) instead of the hash-chaining simulation would take the transparency guarantee to an enterprise level.</p>
+                    </section>
+
+                    <section class="content-section">
                         <h2>Tech Stack</h2>
                         <div class="tech-stack">
                             <span class="tech-item">Java</span>

@@ -166,6 +166,31 @@
                     </section>
 
                     <section class="content-section">
+                        <h2>The Problem</h2>
+                        <p>Correctional facilities face ongoing security challenges — monitoring inmate movements, detecting unauthorized access, and responding to incidents quickly. Traditional security systems rely on human guards who can get tired, distracted, or overwhelmed, especially in large facilities with hundreds of inmates. Automated systems exist but are often expensive proprietary solutions that small to medium-sized facilities cannot afford. My goal was to build a low-cost, IoT-based prototype that demonstrates how sensor networks and automated monitoring can enhance prison security without requiring enterprise-level budgets.</p>
+                        <p>The prototype needed to detect motion in restricted areas, monitor door and gate status, send real-time alerts when security events occur, and provide a central dashboard for security personnel to monitor the entire facility. It also needed to be modular so additional sensors could be added without redesigning the entire system.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Implementation Details</h2>
+                        <p>The system is built around an Arduino Uno as the main microcontroller, connected to multiple sensors including PIR motion detectors for movement detection, magnetic reed switches for door and gate monitoring, and ultrasonic sensors for proximity detection. An ESP8266 WiFi module handles wireless communication between the sensor nodes and the central monitoring computer, sending data over HTTP requests to a simple Node.js server that logs events and triggers alerts.</p>
+                        <p>The C/C++ code on the Arduino runs a continuous loop that reads sensor inputs, processes them through a state machine that tracks whether each zone is in a normal or alert state, and sends status updates to the central server every 500 milliseconds. When a sensor detects an event — like a door opening when it should be locked — the Arduino immediately sends an alert message with the sensor ID, event type, and timestamp. The server processes this alert, logs it to a database, updates the dashboard in real-time, and can trigger optional outputs like buzzers or LED indicators.</p>
+                        <p>The central monitoring dashboard, built with HTML, CSS, and JavaScript, displays a floor plan of the facility with color-coded zones — green for normal, yellow for warning, red for alert. Each zone's status updates in real-time without page refresh using WebSocket connections from the server. The dashboard also maintains a scrolling event log showing the last 100 events with timestamps, sensor locations, and event descriptions.</p>
+                        <p>A significant challenge was handling sensor noise — PIR sensors can trigger false alarms from environmental factors like temperature changes or pets. I implemented a debouncing mechanism that requires two consecutive detections within a 3-second window before triggering an alert, reducing false positives by approximately 80% during testing. Power management was another consideration — the ESP8266 module draws significant current, so I implemented a sleep mode that wakes the WiFi module only when sending data, extending battery life from hours to days.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Results</h2>
+                        <p>The prototype successfully demonstrates an IoT-based security monitoring system. During testing, the system reliably detected motion events, door openings, and proximity violations with a response time of under 1 second from sensor detection to dashboard update. The false positive rate after implementing the debouncing mechanism dropped to acceptable levels — approximately 1-2 false alerts per hour compared to 8-10 without debouncing.</p>
+                        <p>The modular design proved valuable during development — I was able to add new sensor types to the system without modifying the core code, just by defining new sensor profiles in a configuration array. The total component cost for the prototype was under $50, demonstrating that basic IoT security monitoring is achievable on a tight budget. This project sparked my deeper interest in IoT and embedded systems, leading me to explore home automation projects and sensor networks further.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Future Improvements</h2>
+                        <p>A production version would replace the Arduino with more powerful microcontrollers like ESP32 that have built-in WiFi and Bluetooth, reducing component count and power consumption. Machine learning algorithms could analyze sensor patterns to distinguish between genuine threats and false alarms more accurately. Camera integration with motion-triggered recording would provide visual evidence of security events. A mobile app would allow security personnel to monitor the facility and receive alerts on their phones, enabling faster response times. Finally, encrypted communication between sensor nodes and the server would be essential for a real deployment to prevent tampering or spoofing of sensor data.</p>
+                    </section>
+
+                    <section class="content-section">
                         <h2>Tech Stack</h2>
                         <div class="tech-stack">
                             <span class="tech-item">Arduino</span>

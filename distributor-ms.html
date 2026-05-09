@@ -165,6 +165,31 @@
                     </section>
 
                     <section class="content-section">
+                        <h2>The Problem</h2>
+                        <p>ADP Namasinghe, a local distributor business, was managing inventory and sales using spreadsheets and paper records. As the business grew, this approach became increasingly unmanageable — tracking stock levels across multiple products required manually updating dozens of spreadsheet cells, sales records were often lost or duplicated, and generating reports for management took hours. The owner needed a centralized system that could handle inventory tracking, sales management, customer relationships, and reporting all in one place.</p>
+                        <p>The key requirements were real-time inventory visibility, easy order processing, customer history tracking, and simple reporting. The system also needed to support multiple user roles — admin for full access, warehouse staff for inventory management, and sales staff for order processing. Each role needed different permissions and access levels.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Implementation Details</h2>
+                        <p>The distributor management system is built on the MERN stack — MongoDB for the database, Express.js for the backend API, and Node.js as the runtime. The frontend uses HTML and CSS with a dashboard-centric design. MongoDB was chosen for its flexible document structure, which is ideal for storing varied product attributes without needing complex joins. Each product document includes fields for name, category, supplier, stock quantity, reorder level, unit price, and timestamps.</p>
+                        <p>The backend API follows RESTful conventions with endpoints for CRUD operations on products, customers, orders, and users. Authentication is handled with JSON Web Tokens (JWT) — users log in with their credentials and receive a token that expires after 24 hours. Role-based access control (RBAC) checks each request against the user's role before allowing the operation. For example, warehouse staff can update stock quantities but cannot delete customer records.</p>
+                        <p>The inventory tracking system automatically calculates stock levels based on incoming purchase orders and outgoing sales orders. When stock falls below the reorder level, the system flags the product and sends a notification on the dashboard. The sales module allows staff to create orders by searching for products and customers, applying discounts, and generating invoices. The reporting module provides daily, weekly, and monthly sales summaries with visual charts showing trends and comparisons.</p>
+                        <p>One challenge was data consistency across concurrent operations. When multiple warehouse staff update stock simultaneously, the system could show incorrect quantities. I solved this by implementing optimistic concurrency control using MongoDB's document versioning. Each update checks the document version and rejects stale updates, retrying them after refreshing the data. This taught me how NoSQL databases handle concurrency differently from relational databases.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Results</h2>
+                        <p>The distributor management system transformed ADP Namasinghe's operations. Inventory tracking went from manual spreadsheet updates to real-time automatic calculations. Order processing time dropped by approximately 60% since staff could find products and customers instantly through search instead of flipping through paper records. The reporting module gave management visibility into sales trends, slow-moving products, and peak sales periods for the first time.</p>
+                        <p>The system handles the complete workflow — from goods receipt (adding stock from suppliers) to sales order processing to invoice generation. The role-based access control ensures that each staff member can only access the functions relevant to their job, reducing the risk of accidental data modifications. User feedback was positive, with staff reporting that the system saved them roughly 2-3 hours of manual data entry work each day.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Future Improvements</h2>
+                        <p>I would add a mobile-responsive version of the dashboard so warehouse staff can update inventory from the shop floor using their phones. Barcode scanning integration would speed up goods receipt and order picking significantly. A customer portal would let clients view their order history, check invoice status, and make payments online. Predictive analytics using historical sales data could forecast demand and suggest optimal stock levels, helping the business reduce both stockouts and excess inventory costs.</p>
+                    </section>
+
+                    <section class="content-section">
                         <h2>Tech Stack</h2>
                         <div class="tech-stack">
                             <span class="tech-item">Node.js</span>

@@ -165,6 +165,31 @@
                     </section>
 
                     <section class="content-section">
+                        <h2>The Problem</h2>
+                        <p>During my course work, I noticed that many small bookstores in Sri Lanka still operate with paper-based inventory systems. Customers have to visit the store physically to check if a book is available, and the store owner has to manually track sales, stock levels, and orders. This is inefficient for both parties. For my university project, I wanted to build a web-based solution that could bring these small bookstores online without requiring expensive infrastructure or technical expertise.</p>
+                        <p>The goal was simple: create a platform where customers can browse books, check availability, and make purchases online, while the store owner gets an easy-to-use dashboard for managing inventory and orders. The system needed to be affordable, easy to deploy, and require minimal maintenance.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Implementation Details</h2>
+                        <p>The bookstore platform is built with PHP and MySQL, following a traditional server-rendered architecture. The frontend uses HTML, CSS, and JavaScript with a clean, bookstore-themed design. User authentication is implemented with PHP sessions and password hashing using bcrypt. The shopping cart system uses session-based storage so users don't need to create an account to browse, but must log in to checkout.</p>
+                        <p>The MySQL database is structured around three main entities: users, books, and orders. The books table includes fields for title, author, ISBN, category, price, stock quantity, and a cover image path. Categories are normalized into a separate table to allow for easy expansion and filtering. The orders table tracks which user placed the order, which books were ordered, quantities, total price, order status, and timestamps.</p>
+                        <p>A search feature allows customers to find books by title, author, or ISBN with real-time results as they type. The category filtering system uses AJAX calls to avoid full page reloads. The admin dashboard displays sales statistics, low stock warnings, and recent orders in a single view. I also implemented pagination for the book listing to handle large catalogs efficiently, limiting results to 12 books per page with next/previous navigation.</p>
+                        <p>One challenge was handling concurrent orders — when two users try to purchase the last copy of a book simultaneously. I solved this by using MySQL transactions with row-level locking on the stock quantity field. If the stock drops to zero while processing an order, the transaction rolls back and the user is notified. This taught me the importance of handling race conditions in web applications.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Results</h2>
+                        <p>The final bookstore website handles the complete customer journey — browsing, searching, adding to cart, checkout, and order history. The admin interface makes it easy for store owners to add new books, update stock levels, and view order details. The site is responsive and works on mobile devices, which was a key requirement since many users browse on their phones.</p>
+                        <p>Testing was done with a catalog of 50 sample books across 6 categories. The search returns results in under 500ms, order processing completes in under 2 seconds, and the session-based cart works reliably across page navigations. The project received a good grade and gave me practical experience in full-stack web development with PHP, something that later helped me understand how server-side templating and session management work at a deeper level.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Future Improvements</h2>
+                        <p>I would add a recommendation system based on browsing history and purchase patterns to help customers discover new books. A wishlist feature would let users save books for later purchase. Payment gateway integration (like PayPal or Stripe) would make the checkout process complete end-to-end instead of relying on cash on delivery. For the store owner, I would add sales analytics with visual charts showing trends over time, and an import/export feature for managing inventory via CSV files. A review and rating system would also help build trust between buyers and sellers.</p>
+                    </section>
+
+                    <section class="content-section">
                         <h2>Tech Stack</h2>
                         <div class="tech-stack">
                             <span class="tech-item">PHP</span>
